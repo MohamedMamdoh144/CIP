@@ -845,7 +845,7 @@ function IntroSlide() {
                       options={{speed:80,afterComplete:()=>{
                         let tl=gsap.timeline();
                         tl.fromTo("#step-15 .summary-h1",{fontSize:"5rem",y:100},{duration:0.7,fontSize:"4rem",y:0});
-                        tl.to("#step-15 .symptom-item",{duration:0.7,opacity:1,y:`random(-100,50)`,x:`random(-50,50)`,stagger:0.5,ease:"back.out(1.4)"});
+                        tl.to("#step-15 .symptom-item",{duration:0.7,opacity:1,y:`random(-100,20)`,x:`random(-50,50)`,stagger:0.5,ease:"back.out(1.4)"});
                         tl.to("#step-15 .list-hint",{duration:1,y:"25vh",opacity:1,ease:"back.out(1.4)",delay:0.4});
                         tl.to("#step-15 .list-hint",{duration:1,y:"-10%",opacity:0,ease:"back.out(1.4)",delay:2});
                       step15_h1.destroy();
@@ -886,7 +886,7 @@ function IntroSlide() {
                       options={{speed:80,afterComplete:()=>{
                         let tl=gsap.timeline();
                         tl.fromTo("#step-16 .summary-h1",{fontSize:"5rem",y:100},{duration:0.7,fontSize:"4rem",y:0});
-                        tl.to("#step-16 .symptom-item",{duration:0.7,opacity:1,y:`random(-100,50)`,x:`random(-50,50)`,stagger:0.5,ease:"back.out(1.4)"});
+                        tl.to("#step-16 .symptom-item",{duration:0.7,opacity:1,y:`random(-100,20)`,x:`random(-50,50)`,stagger:0.5,ease:"back.out(1.4)"});
                         tl.to("#step-16 .list-hint",{duration:1,y:"25vh",opacity:1,ease:"back.out(1.4)",delay:0.4});
                         tl.to("#step-16 .list-hint",{duration:1,y:"-10%",opacity:0,ease:"back.out(1.4)",delay:2});
                       step16_h1.destroy();
@@ -921,7 +921,7 @@ function IntroSlide() {
                       options={{speed:80,afterComplete:()=>{
                         let tl=gsap.timeline();
                         tl.fromTo("#step-17 .summary-h1",{fontSize:"5rem",y:100},{duration:0.7,fontSize:"4rem",y:0});
-                        tl.to("#step-17 .symptom-item",{duration:0.7,opacity:1,y:`random(-100,50)`,x:`random(-50,50)`,stagger:0.5,ease:"back.out(1.4)"});
+                        tl.to("#step-17 .symptom-item",{duration:0.7,opacity:1,y:`random(-100,20)`,x:`random(-50,50)`,stagger:0.5,ease:"back.out(1.4)"});
                         tl.to("#step-17 .list-hint",{duration:1,y:"25vh",opacity:1,ease:"back.out(1.4)",delay:0.4});
                         tl.to("#step-17 .list-hint",{duration:1,y:"-10%",opacity:0,ease:"back.out(1.4)",delay:2});
                       step17_h1.destroy();
