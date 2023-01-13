@@ -27,7 +27,7 @@ const quiz_1=   {
         "answers": [
           "Stroke",
           "Encephalitis",
-          "Parkison's Disease",
+          "Parkinson's Disease",
           "Myasthenia Gravis"
         ],
         "correctAnswer": "3",

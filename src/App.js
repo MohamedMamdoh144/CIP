@@ -43,6 +43,7 @@ function App() {
           break;
     }
 
+    
   },[page]);
   let render=true;
   if(window.innerWidth<1024){
@@ -50,13 +51,12 @@ function App() {
     alert("Please use a PC to open the app");
   }
   useEffect(()=>{
-    let tl=gsap.timeline();
-    tl.to(".hint-intro",{duration:1.5,opacity:1,y:"10vh",ease:"back.out(1.9)"});
-    tl.to(".hint-intro",{duration:1.5,opacity:0,y:"-100%",ease:"back.out(1.9)",delay:2});
+   
     setTimeout(() => {
       window.location.replace("#/step-2");
-    }, 2500);
-  },[])
+    }, 100);
+  },[]);
+
 
   return (
     <>

@@ -79,8 +79,10 @@ function IntroSlide() {
         
 
     function handler(){
+        
         setTimeout(()=>{
-            ref.current.next();
+            window.location.replace("#/step-"+(parseInt(window.location.hash.split("-")[1])+1));
+            //ref.current.next();
         },600)
     }
     // Manage TypeIt instances here
@@ -126,9 +128,9 @@ function IntroSlide() {
 
 
        if( step==="step-8"){
-            setTimeout(() => {
-                ref.current.next();
-            }, 800);
+        setTimeout(() => {
+            window.location.replace("#/step-9");
+        }, 800);
         }
         else if(step==="step-2"){
             
@@ -288,7 +290,14 @@ function IntroSlide() {
                     options={{speed:70,lifeLike:false,afterComplete:()=>{gsap.to("#step-2 .intro-main-btn",{duration:0.5,opacity:1,delay:0.15});step1_h4.destroy();}}}
                     />
                 </h4>
-                <MainBtn call={handler} text={"let's start"}/>
+                <MainBtn call={()=>{
+                    if(parseInt(window.location.hash.split("-")[1])===2){
+                        setTimeout(() => {
+                            window.location.replace("#/step-3");
+                        }, 600);
+                        
+                    }
+                }} text={"let's start"}/>
                 
             </Step>
 
@@ -307,8 +316,15 @@ function IntroSlide() {
                                 height={"100%"}
                                 ref={video1}
                                 playing
+                                controls
                                 url={'anim.mp4'}
-                                onEnded={handler}
+                                onEnded={()=>{
+                                    if(parseInt(window.location.hash.split("-")[1])===3){
+                                        setTimeout(() => {
+                                            window.location.replace("#/step-4");
+                                        }, 600);
+                                    }
+                                }}
                                  />
             </Step>
 
@@ -331,6 +347,8 @@ function IntroSlide() {
                         let tl=gsap.timeline();
                         tl.fromTo("#step-4 .summary-h1",{fontSize:"7.2rem",y:100},{duration:0.7,fontSize:"4.8rem",y:0});
                         tl.to("#step-4 .symptom-item",{duration:0.7,opacity:1,y:`random(-100,50)`,x:`random(-50,50)`,stagger:0.5,ease:"back.out(1.4)"});
+                        tl.to(".hint-intro",{duration:1.5,opacity:1,y:"10vh",ease:"back.out(1.9)"});
+                        tl.to(".hint-intro",{duration:1.5,opacity:0,y:"-100%",ease:"back.out(1.9)",delay:2});
                         step4_h1.destroy();
                     }}}
                       />
@@ -359,7 +377,13 @@ function IntroSlide() {
                 }}>
                     <div className='quiz-sidebar'>Time For A Little Quiz</div>
                     <div className='mcq-wrap'>
-                     <Quiz quiz={quiz_1} showInstantFeedback={true} continueTillCorrect={true} showDefaultResult={false} onComplete={handler}/>
+                     <Quiz quiz={quiz_1} showInstantFeedback={true} continueTillCorrect={true} showDefaultResult={false} onComplete={()=>{
+                    if(parseInt(window.location.hash.split("-")[1])===5){
+                        setTimeout(() => {
+                            window.location.replace("#/step-6");
+                        }, 600);
+                    }
+                }}/>
                     </div>
                 
             </Step>
@@ -389,7 +413,13 @@ function IntroSlide() {
                     }}}
                       />
                     </h1>
-                    <MainBtn call={handler} text={"continue"}/>
+                    <MainBtn call={()=>{
+                    if(parseInt(window.location.hash.split("-")[1])===6){
+                        setTimeout(() => {
+                            window.location.replace("#/step-7");
+                        }, 600);
+                    }
+                }} text={"continue"}/>
                 
             </Step>
 
@@ -441,7 +471,13 @@ function IntroSlide() {
                     options={{speed:70,lifeLike:false,afterComplete:()=>{gsap.to("#step-7 .intro-main-btn",{duration:0.5,opacity:1,delay:0.15});step7_h4.destroy();}}}
                     />
                 </h4>
-                <MainBtn call={handler} text={"Continue"}/>
+                <MainBtn call={()=>{
+                    if(parseInt(window.location.hash.split("-")[1])===7){
+                        setTimeout(() => {
+                            window.location.replace("#/step-8");
+                        }, 600);
+                    }
+                }} text={"Continue"}/>
                 
             </Step>
 
@@ -482,8 +518,15 @@ function IntroSlide() {
                                 height={"100%"}
                                 ref={video2}
                                 playing
+                                controls
                                 url={'anim.mp4'}
-                                onEnded={handler}
+                                onEnded={()=>{
+                                    if(parseInt(window.location.hash.split("-")[1])===9){
+                                        setTimeout(() => {
+                                            window.location.replace("#/step-10");
+                                        }, 600);
+                                    }
+                                }}
                                  />
                
            </Step>
@@ -539,7 +582,13 @@ function IntroSlide() {
                 }}>
                 <div className='quiz-sidebar'>Time For Another Quiz</div>
                     <div className='mcq-wrap'>
-                     <Quiz quiz={quiz_2} showInstantFeedback={true} continueTillCorrect={true} showDefaultResult={false} onComplete={handler}/>
+                     <Quiz quiz={quiz_2} showInstantFeedback={true} continueTillCorrect={true} showDefaultResult={false} onComplete={()=>{
+                    if(parseInt(window.location.hash.split("-")[1])===11){
+                        setTimeout(() => {
+                            window.location.replace("#/step-12");
+                        }, 600);
+                    }
+                }}/>
                     </div>
 
                 
@@ -591,7 +640,13 @@ function IntroSlide() {
                     options={{speed:80,afterComplete:()=>{gsap.to("#step-12 .intro-main-btn",{duration:0.5,opacity:1,delay:0.15});step12_h4.destroy();}}}
                     />
                 </h4>
-                <MainBtn call={handler} text={"Continue"}/>
+                <MainBtn call={()=>{
+                    if(parseInt(window.location.hash.split("-")[1])===12){
+                        setTimeout(() => {
+                            window.location.replace("#/step-13");
+                        }, 600);
+                    }
+                }} text={"Continue"}/>
                 
             </Step>
 
@@ -745,7 +800,13 @@ function IntroSlide() {
                     }}}
                     />
                 </h4>
-                <MainBtn call={handler} text={"See next"} />
+                <MainBtn call={()=>{
+                    if(parseInt(window.location.hash.split("-")[1])===14){
+                        setTimeout(() => {
+                            window.location.replace("#/step-15");
+                        }, 600);
+                    }
+                }} text={"See next"} />
                 </div>
                 <div className='AI'><TypeIt getBeforeInit={(instance) => {
                         setStep14_ai(instance);

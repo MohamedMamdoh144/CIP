@@ -52,7 +52,10 @@ function Menu({show,setshow,close,setclose}){
         <div className='menu' onMouseOver={()=>rive && OnHover.fire()} 
         onMouseOut={()=>rive && OnUnHover.fire()}
         onMouseDown={()=>{
-                    rive && OnMouseClick.fire();
+                    setTimeout(() => {
+                        rive && OnMouseClick.fire();
+                    }, 200);
+                    
                             }} >
             <RiveComponent  />
             {console.log(rive)}
